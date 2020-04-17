@@ -3,5 +3,10 @@
   "version": "0.0.0",
   "description": "Parasite idle game",
   "repository": "git@github.com:NicoBurno/parasidle.git",
-  "author": "NicoBurno <nicoburno@gmail.com> (https://github.com/NicoBurno"
+  "author": "NicoBurno <nicoburno@gmail.com> (https://github.com/NicoBurno",
+  "dependencies": {
+    "@capacitor/android": "2.0.1",
+    "@capacitor/cli": "^2.0.1",
+    "@capacitor/core": "^2.0.1"
+  }
 }

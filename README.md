@@ -1,0 +1,2 @@
+# parasidle
+Parasite idle game

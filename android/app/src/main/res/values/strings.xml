@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">parasidle</string>
+    <string name="title_activity_main">parasidle</string>
+    <string name="package_name">com.parasidle.app</string>
+    <string name="custom_url_scheme">com.parasidle.app</string>
+</resources>

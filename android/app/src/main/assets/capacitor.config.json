@@ -1,0 +1,8 @@
+{
+  "appId": "com.parasidle.app",
+  "appName": "parasidle",
+  "bundledWebRuntime": false,
+  "npmClient": "yarn",
+  "webDir": "www",
+  "cordova": {}
+}

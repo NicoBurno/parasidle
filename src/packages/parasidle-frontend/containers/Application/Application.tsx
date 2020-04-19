@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { Game } from '../../packages/parasidle-core';
-import { Application as ParasidleGUIReact } from '../../packages/parasidle-gui-react';
+import { Game } from '../../../../packages/parasidle-core';
+import { Application as ParasidleGUIReact } from '../../../../packages/parasidle-gui-react';
 
 export interface IApplicationProps {
   game: Game;

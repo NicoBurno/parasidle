@@ -3,7 +3,7 @@ const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.ts',
+  entry: './src/packages/parasidle-frontend/index.ts',
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'www'),
@@ -27,7 +27,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: 'src/index.html.ejs',
+      template: './src/packages/parasidle-frontend/index.html.ejs',
     }),
   ],
   devServer: {

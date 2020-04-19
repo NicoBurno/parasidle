@@ -1,4 +1,4 @@
-import { Game } from './packages/parasidle-core';
+import { Game } from '../parasidle-core';
 
 import { renderApplication } from './services/renderApplication';
 

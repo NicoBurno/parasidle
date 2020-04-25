@@ -13,7 +13,6 @@ export function Application({ game }: IApplicationProps) {
     game.emit('click');
   }, [game]);
   const handleUpdateGameState = React.useCallback((state: IGameState) => {
-    console.log('state');
     setGameState({ ...state });
   }, []);
   React.useEffect(() => {
@@ -32,6 +31,28 @@ export function Application({ game }: IApplicationProps) {
       <h2>Parasidle GUI React</h2>
       <div>
         Value: {gameState.value}
+      </div>
+      <div>
+        {gameState.buildings.map(building => (
+          <div key={building.id}>
+            {building.title}#{building.count}
+            {[1, 10, 100].map(count => (
+              <button
+                key={`${building.id}_${count}`}
+                onClick={(e) => {
+                  e.stopPropagation();
+
+                  game.emit('buyBuilding', {
+                    id: building.id,
+                    count,
+                  })
+                }}
+              >
+                Buy {count}
+              </button>
+            ))}
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import { EventEmitter } from './utils/EventEmitter/EventEmitter';
 import { IGameInputEvents, IGameOutputEvents } from './types/events';
 import { IContext } from './types/context';
 import { GameState } from './GameState/GameState';
+import { CONFIG } from './constants/config';
 
 export class Game {
   private context: IContext;
@@ -17,6 +18,7 @@ export class Game {
 
   private createContext() {
     return {
+      config: CONFIG,
       input: new EventEmitter<IGameInputEvents>(),
       output: new EventEmitter<IGameOutputEvents>(),
     };
@@ -25,5 +27,7 @@ export class Game {
   public emit: EventEmitter<IGameInputEvents>['emit'];
   public on: EventEmitter<IGameOutputEvents>['on'];
 
-  public getGameState = () => this.gameState.state;
+  public getGameState() {
+    return this.gameState.getState();
+  }
 }

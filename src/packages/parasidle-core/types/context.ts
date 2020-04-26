@@ -5,5 +5,5 @@ import { IGameConfig } from './config';
 export interface IContext {
   config: IGameConfig;
   input: EventEmitter<IGameInputEvents>;
-  output: EventEmitter<IGameOutputEvents>
+  output: EventEmitter<IGameOutputEvents>;
 }

@@ -2,10 +2,12 @@ type TListener<T> = (payload: T) => void;
 
 type TOptionalArgument<M extends {}, K extends keyof M> = M[K] extends void ? [K] : [K, M[K]];
 
+type TEventsListeners<T> = {
+  [K in keyof T]?: TListener<T[keyof T]>[];
+}
+
 export class EventEmitter<T extends {}> {
-  private events: {
-    [P in keyof T]?: TListener<T[keyof T]>[]
-  } = {};
+  private events: TEventsListeners<T> = {} as TEventsListeners<T>;
 
   public emit = <K extends keyof T>(...args: TOptionalArgument<T, K>) => {
     const [type, payload] = args;
@@ -25,7 +27,7 @@ export class EventEmitter<T extends {}> {
       events[type] = [];
     }
 
-    events[type]!.push(listener);
+    events[type].push(listener);
 
     return () => {
       events[type] = events[type]!.filter(fn => fn !== listener);

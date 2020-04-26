@@ -1,6 +1,5 @@
 import { IGameState, IGameFastState } from '../types/state';
 import { IContext } from '../types/context';
-import '../utils/math/increase';
 import { createStore, TDispatch } from '../store/store';
 import { IGameInputBuildingBuyEvent } from '../types/events/input/building';
 import { IState } from '../store/types';

@@ -23,7 +23,7 @@ export function GameContainer({ game }: IApplicationProps) {
     return () => {
       unsubscribe();
     }
-  }, [handleMainClick]);
+  }, [game, handleMainClick, handleUpdateGameState]);
 
   return (
     <div

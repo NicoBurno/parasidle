@@ -11,6 +11,7 @@ export function getComposeEnhancers({ name }: IGetComposeEnhancersParams) {
     if (__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) {
       return __REDUX_DEVTOOLS_EXTENSION_COMPOSE__({
         name,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       } as any);
     }
   }
